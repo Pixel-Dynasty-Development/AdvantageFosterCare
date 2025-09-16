@@ -2,6 +2,8 @@
 
 This document provides a summary of key information about Advantage Family Outreach & Foster Care, intended for use during the website redesign and development process.
 
+## Company Information
+
 ### **Company Overview**
 
 -   **Company Name:** Advantage Family Outreach & Foster Care
@@ -29,6 +31,8 @@ This document provides a summary of key information about Advantage Family Outre
 -   **Email:** advantagefostercare@gmail.com (current), info@advantagefostercare.com (planned)
 
 -   **Foster Parent Inquiries:** Contact Shannon, Foster Parent Coordinator, at 614-312-8778.
+
+## Development Information
 
 ### **Project Timeline**
 
@@ -59,3 +63,16 @@ This document provides a summary of key information about Advantage Family Outre
 -   **Tailwind CSS:** A utility-first CSS framework for styling.
 -   **Lucide Icons:** A collection of open-source icons.
 -   **JavaScript:** For interactive elements and client-side routing.
+
+### **Project Variables**
+
+#### **Branding Colors**
+
+-   `brand-blue`: `#1E3A8A`
+-   `brand-teal`: `#0D9488`
+-   `brand-light`: `#F0F9FF`
+-   `brand-accent`: `#F59E0B`
+
+#### **Images Used**
+
+-   `assets/ToyCars.jpg`: Used in the hero section of the home page.
