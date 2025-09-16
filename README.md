@@ -26,6 +26,6 @@ This document provides a summary of key information about Advantage Family Outre
 
 -   **Main Phone Number:** (419) 526-KIDS or (419) 526-5437
 
--   **Email:** advantagefostercare@gmail.com (currently) info@advantagefostercare@gmail.com (Planned)
+-   **Email:** advantagefostercare@gmail.com (currently) info@advantagefostercare.com (Planned)
 
 -   **Foster Parent Inquiries:** Contact Shannon at 614-312-8778.
