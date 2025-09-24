@@ -76,3 +76,8 @@ This document provides a summary of key information about Advantage Family Outre
 #### **Images Used**
 
 -   `assets/ToyCars.jpg`: Used in the hero section of the home page.
+
+## **TO DO**
+
+-   Create portal pages domain.com/portal/ *Portal name*
+-   Deal with routing based on the portal.
