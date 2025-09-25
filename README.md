@@ -6,78 +6,79 @@ This document provides a summary of key information about Advantage Family Outre
 
 ### **Company Overview**
 
--   **Company Name:** Advantage Family Outreach & Foster Care
+- **Company Name:** Advantage Family Outreach & Foster Care
 
--   **Mission:** To create environments that empower children to grow, heal, and thrive.
+- **Mission:** To create environments that empower children to grow, heal, and thrive.
 
--   **Core Business:** A private foster care agency licensed by the Ohio Department of Youth Services.
+- **Core Business:** A private foster care agency licensed by the Ohio Department of Youth Services.
 
 ### **Services & Programs**
 
--   **Specialized Foster Care:** For children with specific needs.
+- **Specialized Foster Care:** For children with specific needs.
 
--   **Sibling Group Placements:** Facilitates keeping siblings together.
+- **Sibling Group Placements:** Facilitates keeping siblings together.
 
--   **Therapeutic Foster Homes:** Provides therapeutic environments for children.
+- **Therapeutic Foster Homes:** Provides therapeutic environments for children.
 
--   **Group Homes:** Offers a structured living environment.
+- **Group Homes:** Offers a structured living environment.
 
--   **Support:** Offers training and resources for foster families, along with 24/7 support.
+- **Support:** Offers training and resources for foster families, along with 24/7 support.
 
 ### **Contact Information**
 
--   **Main Phone Number:** (419) 526-KIDS or (419) 526-5437
+- **Main Phone Number:** (419) 526-KIDS or (419) 526-5437
 
--   **Email:** advantagefostercare@gmail.com (current), info@advantagefostercare.com (planned)
+- **Email:** advantagefostercare@gmail.com (current), info@advantagefostercare.com (planned)
 
--   **Foster Parent Inquiries:** Contact Shannon, Foster Parent Coordinator, at 614-312-8778.
+- **Foster Parent Inquiries:** Contact Shannon, Foster Parent Coordinator, at 614-312-8778.
 
 ## Development Information
 
 ### **Project Timeline**
 
--   **Start Date:** September 15, 2025
--   **Phase 1 (Initial Setup & Core Content):** TBD
-    -   Basic HTML structure
-    -   Tailwind CSS integration
-    -   Initial content for Home, About Us, Contact Us pages
-    -   Navigation and footer implementation
--   **Phase 2 (Content Expansion & Refinement):** TBD
-    -   Detailed content for About Us and Contact Us pages
-    -   Addition of Resources dropdown
-    -   Review and refinement of existing sections
--   **Phase 3 (Advanced Features & Testing):** TBD
-    -   (To be defined: e.g., dynamic content, backend integration, forms)
-    -   Cross-browser compatibility testing
-    -   Accessibility review
--   **Launch Date (Planned):** TBD
+- **Start Date:** September 15, 2025
+- **Phase 1 (Initial Setup & Core Content):** TBD
+  - Basic HTML structure
+  - Tailwind CSS integration
+  - Initial content for Home, About Us, Contact Us pages
+  - Navigation and footer implementation
+- **Phase 2 (Content Expansion & Refinement):** TBD
+  - Detailed content for About Us and Contact Us pages
+  - Review and refinement of existing sections
+- **Phase 3 (Advanced Features & Testing):** TBD
+  - (To be defined: e.g., dynamic content, backend integration, forms)
+  - Cross-browser compatibility testing
+  - Accessibility review
+- **Launch Date (Planned):** TBD
 
 ### **Website Links**
 
--   **Current Website:** `https://advantagefostercare.com/`
--   **GitHub Pages Hosted Website:** `https://pixel-dynasty-development.github.io/AdvantageFosterCare/`
+- **Current Website:** `https://advantagefostercare.com/`
+- **GitHub Pages Hosted Website:** `https://pixel-dynasty-development.github.io/AdvantageFosterCare/`
 
 ### **Technologies Used**
 
--   **HTML5:** For the basic structure of the website.
--   **Tailwind CSS:** A utility-first CSS framework for styling.
--   **Lucide Icons:** A collection of open-source icons.
--   **JavaScript:** For interactive elements and client-side routing.
+- **HTML5:** For the basic structure of the website.
+- **Tailwind CSS:** A utility-first CSS framework for styling.
+- **Lucide Icons:** A collection of open-source icons.
+- **JavaScript:** For interactive elements and client-side routing.
 
 ### **Project Variables**
 
 #### **Branding Colors**
 
--   `brand-blue`: `#1E3A8A`
--   `brand-teal`: `#0D9488`
--   `brand-light`: `#F0F9FF`
--   `brand-accent`: `#F59E0B`
+- `brand-blue`: `#1E3A8A`
+- `brand-teal`: `#0D9488`
+- `brand-light`: `#F0F9FF`
+- `brand-accent`: `#F59E0B`
 
 #### **Images Used**
 
--   `assets/ToyCars.jpg`: Used in the hero section of the home page.
+- `assets/ToyCars.jpg`: Used in the hero section of the home page.
 
 ## **TO DO**
 
--   Create portal pages domain.com/portal/ *Portal name*
--   Deal with routing based on the portal.
+- Create portal pages domain.com/portal/ _Portal name_
+- Deal with routing based on the portal.
+- Implement basic form submission handling for the contact form in `index.html`.
+- Plan for additional portals (e.g., Foster Parent Portal, Volunteer Portal).
