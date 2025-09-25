@@ -1,9 +1,10 @@
 ---
 name: "✅ General Task"
 about: A general task or to-do item.
-title: "[TASK] -"
+title: "[TASK] - "
 labels: task
 assignees: ''
+type: Task
 
 ---
 
