@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>Advantage Foster Care - A New Beginning</title>
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-			rel="stylesheet" />
-		<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
-			type="module"></script>
-		<script>
-			tailwind.config = {
-				theme: {
-					extend: {
-						fontFamily: {
-							sans: ["Inter", "sans-serif"],
-						},
-						colors: {
-							"brand-blue": "#1E3A8A",
-							"brand-teal": "#0D9488",
-							"brand-light": "#F0F9FF",
-							"brand-accent": "#F59E0B",
-						},
-					},
-				},
-			};
-		</script>
-		<style>
-			body {
-				scroll-behavior: smooth;
-			}
-		</style>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advantage Foster Care - A New Beginning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              "brand-blue": "#1E3A8A",
+              "brand-teal": "#0D9488",
+              "brand-light": "#F0F9FF",
+              "brand-accent": "#F59E0B",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
 
-	<body class="bg-brand-light font-sans antialiased">
-		<!-- Header Navigation - This is now a single, reusable component for the entire site -->
-		<header
-			id="header"
-			class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-			<div class="container mx-auto px-6 py-4">
-				<div class="flex items-center justify-between">
-					<div class="flex items-center space-x-2">
-						<svg
+  <body class="bg-brand-light font-sans antialiased">
+    <!-- Header Navigation - This is now a single, reusable component for the entire site -->
+    <header
+      id="header"
+      class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <!-- <svg
 							class="h-8 w-8 text-brand-blue"
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
@@ -60,657 +58,649 @@
 							<path d="M12 2L2 7l10 5 10-5-10-5z"></path>
 							<path d="M2 17l10 5 10-5"></path>
 							<path d="M2 12l10 5 10-5"></path>
-						</svg>
-						<a href="/"
-							><span class="text-xl font-bold text-brand-blue"
+						</svg> -->
+            <a href="/">
+              <!-- <span class="text-xl font-bold text-brand-blue"
 								>Advantage Foster Care</span
-							></a
-						>
-					</div>
-					<nav class="hidden lg:flex items-center space-x-8">
-						<a
-							href="#home"
-							class="text-gray-600 hover:text-brand-blue transition-colors"
-							>Home</a
-						>
-						<a
-							href="#about-us"
-							class="text-gray-600 hover:text-brand-blue transition-colors"
-							>About Us</a
-						>
-						<a
-							href="#contact-us"
-							class="text-gray-600 hover:text-brand-blue transition-colors"
-							>Contact</a
-						>
+							> -->
+              <img src="assets/Logo.jpg" alt="logo" height="40" width="185" />
+            </a>
+          </div>
+          <nav class="hidden lg:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="text-gray-600 hover:text-brand-blue transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about-us"
+              class="text-gray-600 hover:text-brand-blue transition-colors"
+              >About Us</a
+            >
+            <a
+              href="#contact-us"
+              class="text-gray-600 hover:text-brand-blue transition-colors"
+              >Contact</a
+            >
 
+            <!-- Resources Dropdown -->
+            <div class="relative group">
+              <button
+                class="flex items-center text-gray-600 hover:text-brand-blue transition-colors focus:outline-none">
+                Resources
+                <svg
+                  class="w-4 h-4 ml-1 transform transition-transform group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div
+                class="absolute hidden group-hover:block z-25 bg-white shadow-lg rounded-md mt-1.5 w-40 left-0 orgin-top-left transition-all duration-500">
+                <a
+                  href="resources.html#for-parents"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >For Parents</a
+                >
+                <a
+                  href="resources.html#group-homes"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Group Homes</a
+                >
+                <a
+                  href="resources.html#careers"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Careers</a
+                >
+              </div>
+            </div>
+            <a
+              href="portal.html"
+              class="text-gray-600 hover:text-brand-blue transition-colors"
+              >Portals</a
+            >
+          </nav>
+          <div class="flex items-center space-x-4">
+            <a
+              href="#contact-us"
+              class="hidden lg:inline-block bg-brand-accent text-white font-semibold px-5 py-2 rounded-lg hover:bg-amber-500 transition-all shadow-md"
+              >Get Involved</a
+            >
+            <button id="mobile-menu-button" class="lg:hidden text-brand-blue">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
+        <a href="#home" class="block py-2 text-gray-600 hover:text-brand-blue"
+          >Home</a
+        >
+        <a
+          href="#about-us"
+          class="block py-2 text-gray-600 hover:text-brand-blue"
+          >About Us</a
+        >
+        <a
+          href="#services"
+          class="block py-2 text-gray-600 hover:text-brand-blue"
+          >Our Services</a
+        >
+        <a
+          href="#contact-us"
+          class="block py-2 text-gray-600 hover:text-brand-blue"
+          >Contact</a
+        >
+        <a
+          href="portal.html"
+          class="block py-2 text-gray-600 hover:text-brand-blue"
+          >Employee Portal</a
+        >
+        <a
+          href="index.html#contact-us"
+          class="block mt-2 w-full text-center bg-brand-accent text-white font-semibold px-5 py-2 rounded-lg hover:bg-amber-500 transition-all shadow-md"
+          >Get Involved</a
+        >
+      </div>
+    </header>
 
-						<!-- Resources Dropdown -->
-						<div class="relative group">
-							<button
-								class="flex items-center text-gray-600 hover:text-brand-blue transition-colors focus:outline-none">
-								Resources
-								<svg
-									class="w-4 h-4 ml-1 transform transition-transform group-hover:rotate-180"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M19 9l-7 7-7-7"></path>
-								</svg>
-							</button>
-							<div
-								class="absolute hidden group-hover:block z-25 bg-white shadow-lg rounded-md mt-1.5 w-40 left-0 orgin-top-left transition-all duration-500">
-								<a
-									href="#resources"
-									class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-									>For Parents</a
-								>
-								<a
-									href="#"
-									class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-									>Group Homes</a
-								>
-								<a
-									href="#"
-									class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-									>Careers</a
-								>
-							</div>
-						</div>
-					</nav>
-					<div class="flex items-center space-x-4">
-						<a
-							href="#contact-us"
-							class="hidden lg:inline-block bg-brand-accent text-white font-semibold px-5 py-2 rounded-lg hover:bg-amber-500 transition-all shadow-md"
-							>Get Involved</a
-						>
-						<button
-							id="mobile-menu-button"
-							class="lg:hidden text-brand-blue">
-							<svg
-								class="w-6 h-6"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor">
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-							</svg>
-						</button>
-					</div>
-				</div>
-			</div>
-			<!-- Mobile Menu -->
-			<div
-				id="mobile-menu"
-				class="hidden lg:hidden px-6 pb-4">
-				<a
-					href="#home"
-					class="block py-2 text-gray-600 hover:text-brand-blue"
-					>Home</a
-				>
-				<a
-					href="#about-us"
-					class="block py-2 text-gray-600 hover:text-brand-blue"
-					>About Us</a
-				>
-				<a
-					href="#services"
-					class="block py-2 text-gray-600 hover:text-brand-blue"
-					>Our Services</a
-				>
-				<a
-					href="#contact-us"
-					class="block py-2 text-gray-600 hover:text-brand-blue"
-					>Contact</a
-				>
-				<a
-					href="#contact-us"
-					class="block mt-2 w-full text-center bg-brand-accent text-white font-semibold px-5 py-2 rounded-lg hover:bg-amber-500 transition-all shadow-md"
-					>Get Involved</a
-				>
-			</div>
-		</header>
+    <main>
+      <!-- Home Page Content -->
+      <section id="page-home" class="page">
+        <div
+          id="hero-section"
+          class="relative min-h-[70vh] flex items-center justify-center text-white bg-black">
+          <div class="absolute inset-0">
+            <img
+              src="assets/ToyCars.jpg"
+              alt="Caring family moment"
+              class="w-full h-full object-cover opacity-50" />
+          </div>
+          <div class="relative z-10 text-center p-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+              Open Your Heart, Open Your Home.
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-200">
+              Every child deserves a safe and loving family. Discover how you
+              can make a life-changing difference today.
+            </p>
+            <a
+              href="#contact-us"
+              class="bg-brand-accent text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-amber-500 transition-all shadow-lg transform hover:scale-105"
+              >Become a Foster Parent</a
+            >
+          </div>
+        </div>
 
+        <div id="about-section" class="py-20 bg-white">
+          <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-brand-blue mb-4">
+              Our Mission: Building Brighter Futures
+            </h2>
 
-		<main>
-			<!-- Home Page Content -->
-			<section
-				id="page-home"
-				class="page">
-				<div
-					id="hero-section"
-					class="relative min-h-[70vh] flex items-center justify-center text-white bg-black">
-					<div class="absolute inset-0">
-						<img
-							src="assets/ToyCars.jpg"
-							alt="Caring family moment"
-							class="w-full h-full object-cover opacity-50" />
-					</div>
-					<div class="relative z-10 text-center p-6">
-						<h1
-							class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
-							Open Your Heart, Open Your Home.
-						</h1>
-						<p
-							class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-200">
-							Every child deserves a safe and loving family. Discover
-							how you can make a life-changing difference today.
-						</p>
-						<a
-							href="#contact-us"
-							class="bg-brand-accent text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-amber-500 transition-all shadow-lg transform hover:scale-105"
-							>Become a Foster Parent</a
-						>
-					</div>
-				</div>
+            <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-12">
+              We are dedicated to providing nurturing and stable homes for
+              children in need. Our team works tirelessly to support both our
+              foster families and the children in our care, ensuring everyone
+              has the resources they need to thrive.
+            </p>
+            <div class="grid md:grid-cols-3 gap-10">
+              <div class="p-8 bg-brand-light rounded-xl shadow-sm">
+                <i
+                  data-lucide="heart-handshake"
+                  class="w-12 h-12 mx-auto text-brand-teal mb-4"></i>
+                <h3 class="text-xl font-semibold text-brand-blue mb-2">
+                  24/7 Support
+                </h3>
+                <p class="text-gray-600">
+                  Our dedicated team is always available to provide guidance and
+                  support to our foster families, day or night.
+                </p>
+              </div>
+              <div class="p-8 bg-brand-light rounded-xl shadow-sm">
+                <i
+                  data-lucide="book-open-check"
+                  class="w-12 h-12 mx-auto text-brand-teal mb-4"></i>
+                <h3 class="text-xl font-semibold text-brand-blue mb-2">
+                  Comprehensive Training
+                </h3>
+                <p class="text-gray-600">
+                  We equip our foster parents with the knowledge and skills they
+                  need to provide exceptional care.
+                </p>
+              </div>
+              <div class="p-8 bg-brand-light rounded-xl shadow-sm">
+                <i
+                  data-lucide="users"
+                  class="w-12 h-12 mx-auto text-brand-teal mb-4"></i>
+                <h3 class="text-xl font-semibold text-brand-blue mb-2">
+                  Community Focused
+                </h3>
+                <p class="text-gray-600">
+                  Join a welcoming community of fellow foster parents and staff
+                  who share your passion for helping children.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div
-					id="about-section"
-					class="py-20 bg-white">
-					<div class="container mx-auto px-6 text-center">
-						<h2 class="text-3xl font-bold text-brand-blue mb-4">
-							Our Mission: Building Brighter Futures
-						</h2>
+        <div id="services-section" class="py-20 bg-brand-light">
+          <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-brand-blue mb-4">
+                How We Can Help
+              </h2>
+              <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+                We offer a range of services designed to meet the diverse needs
+                of children and foster families.
+              </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                <img
+                  src="https://placehold.co/600x400/0D9488/FFFFFF?text=Traditional+Care"
+                  alt="Children playing in a park"
+                  class="w-full h-48 object-cover" />
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-brand-blue mb-2">
+                    Traditional Foster Care
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Providing a temporary, safe, and nurturing home for children
+                    while their families work towards reunification.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-brand-teal font-semibold hover:underline"
+                    >Learn More &rarr;</a
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                <img
+                  src="https://placehold.co/600x400/1E3A8A/FFFFFF?text=Therapeutic+Care"
+                  alt="Child receiving therapy"
+                  class="w-full h-48 object-cover" />
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-brand-blue mb-2">
+                    Therapeutic Foster Care
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Specialized care for children with elevated emotional or
+                    behavioral needs, with extra training and support for
+                    parents.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-brand-teal font-semibold hover:underline"
+                    >Learn More &rarr;</a
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                <img
+                  src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Adoption+Services"
+                  alt="Family holding hands"
+                  class="w-full h-48 object-cover" />
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-brand-blue mb-2">
+                    Adoption Services
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Helping to create permanent families for children when
+                    returning to their biological family is not possible.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-brand-teal font-semibold hover:underline"
+                    >Learn More &rarr;</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-						<p class="max-w-3xl mx-auto text-gray-600 text-lg mb-12">
-							We are dedicated to providing nurturing and stable homes
-							for children in need. Our team works tirelessly to
-							support both our foster families and the children in our
-							care, ensuring everyone has the resources they need to
-							thrive.
-						</p>
-						<div class="grid md:grid-cols-3 gap-10">
-							<div class="p-8 bg-brand-light rounded-xl shadow-sm">
-								<i
-									data-lucide="heart-handshake"
-									class="w-12 h-12 mx-auto text-brand-teal mb-4"></i>
-								<h3
-									class="text-xl font-semibold text-brand-blue mb-2">
-									24/7 Support
-								</h3>
-								<p class="text-gray-600">
-									Our dedicated team is always available to provide
-									guidance and support to our foster families, day
-									or night.
-								</p>
-							</div>
-							<div class="p-8 bg-brand-light rounded-xl shadow-sm">
-								<i
-									data-lucide="book-open-check"
-									class="w-12 h-12 mx-auto text-brand-teal mb-4"></i>
-								<h3
-									class="text-xl font-semibold text-brand-blue mb-2">
-									Comprehensive Training
-								</h3>
-								<p class="text-gray-600">
-									We equip our foster parents with the knowledge
-									and skills they need to provide exceptional care.
-								</p>
-							</div>
-							<div class="p-8 bg-brand-light rounded-xl shadow-sm">
-								<i
-									data-lucide="users"
-									class="w-12 h-12 mx-auto text-brand-teal mb-4"></i>
-								<h3
-									class="text-xl font-semibold text-brand-blue mb-2">
-									Community Focused
-								</h3>
-								<p class="text-gray-600">
-									Join a welcoming community of fellow foster
-									parents and staff who share your passion for
-									helping children.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div id="impact-section" class="py-20 bg-brand-blue text-white">
+          <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">Our Impact, By the Numbers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <p class="text-5xl font-bold text-brand-accent">1,200+</p>
+                <p class="text-lg text-blue-200 mt-2">Children Served</p>
+              </div>
+              <div>
+                <p class="text-5xl font-bold text-brand-accent">350+</p>
+                <p class="text-lg text-blue-200 mt-2">
+                  Dedicated Foster Families
+                </p>
+              </div>
+              <div>
+                <p class="text-5xl font-bold text-brand-accent">15</p>
+                <p class="text-lg text-blue-200 mt-2">Years of Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div
-					id="services-section"
-					class="py-20 bg-brand-light">
-					<div class="container mx-auto px-6">
-						<div class="text-center mb-12">
-							<h2 class="text-3xl font-bold text-brand-blue mb-4">
-								How We Can Help
-							</h2>
-							<p class="max-w-3xl mx-auto text-gray-600 text-lg">
-								We offer a range of services designed to meet the
-								diverse needs of children and foster families.
-							</p>
-						</div>
-						<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-							<div
-								class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-								<img
-									src="https://placehold.co/600x400/0D9488/FFFFFF?text=Traditional+Care"
-									alt="Traditional Foster Care"
-									class="w-full h-48 object-cover" />
-								<div class="p-6">
-									<h3
-										class="text-xl font-semibold text-brand-blue mb-2">
-										Traditional Foster Care
-									</h3>
-									<p class="text-gray-600 mb-4">
-										Providing a temporary, safe, and nurturing
-										home for children while their families work
-										towards reunification.
-									</p>
-									<a
-										href="#"
-										class="text-brand-teal font-semibold hover:underline"
-										>Learn More &rarr;</a
-									>
-								</div>
-							</div>
-							<div
-								class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-								<img
-									src="https://placehold.co/600x400/1E3A8A/FFFFFF?text=Therapeutic+Care"
-									alt="Therapeutic Foster Care"
-									class="w-full h-48 object-cover" />
-								<div class="p-6">
-									<h3
-										class="text-xl font-semibold text-brand-blue mb-2">
-										Therapeutic Foster Care
-									</h3>
-									<p class="text-gray-600 mb-4">
-										Specialized care for children with elevated
-										emotional or behavioral needs, with extra
-										training and support for parents.
-									</p>
-									<a
-										href="#"
-										class="text-brand-teal font-semibold hover:underline"
-										>Learn More &rarr;</a
-									>
-								</div>
-							</div>
-							<div
-								class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-								<img
-									src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Adoption+Services"
-									alt="Adoption Services"
-									class="w-full h-48 object-cover" />
-								<div class="p-6">
-									<h3
-										class="text-xl font-semibold text-brand-blue mb-2">
-										Adoption Services
-									</h3>
-									<p class="text-gray-600 mb-4">
-										Helping to create permanent families for
-										children when returning to their biological
-										family is not possible.
-									</p>
-									<a
-										href="#"
-										class="text-brand-teal font-semibold hover:underline"
-										>Learn More &rarr;</a
-									>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div id="contact-section" class="py-20 bg-white">
+          <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 class="text-3xl font-bold text-brand-blue mb-4">
+                  Ready to Make a Difference?
+                </h2>
+                <p class="text-gray-600 text-lg mb-6">
+                  We'd love to hear from you. Whether you're interested in
+                  becoming a foster parent, volunteering, or just have a
+                  question, please reach out. Our team is ready to help you
+                  start your journey.
+                </p>
+                <div class="space-y-4 text-gray-700">
+                  <!-- <p class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-brand-teal"></i> 123 Caring Lane, Hopeville, USA</p> -->
+                  <p class="flex items-center">
+                    <i
+                      data-lucide="phone"
+                      class="w-5 h-5 mr-3 text-brand-teal"></i>
+                    (419) 526-KIDS or (419) 526-5437
+                  </p>
+                  <p class="flex items-center">
+                    <i
+                      data-lucide="mail"
+                      class="w-5 h-5 mr-3 text-brand-teal"></i>
+                    info@advantagefostercare.com
+                  </p>
+                </div>
+              </div>
+              <div class="bg-brand-light p-8 rounded-lg shadow-lg">
+                <form>
+                  <div class="mb-5">
+                    <label
+                      for="name"
+                      class="block mb-2 text-sm font-medium text-gray-700"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+                      placeholder="John Doe" />
+                  </div>
+                  <div class="mb-5">
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-700"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity50"
+                      placeholder="you@example.com" />
+                  </div>
+                  <div class="mb-5">
+                    <label
+                      for="message"
+                      class="block mb-2 text-sm font-medium text-gray-700"
+                      >Your Message</label
+                    >
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+                      placeholder="I'm interested in learning more about..."></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-brand-teal text-white font-bold py-3 px-4 rounded-lg hover:bg-teal-700 transition-colors shadow-md">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-				<div
-					id="impact-section"
-					class="py-20 bg-brand-blue text-white">
-					<div class="container mx-auto px-6 text-center">
-						<h2 class="text-3xl font-bold mb-12">
-							Our Impact, By the Numbers
-						</h2>
-						<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-							<div>
-								<p class="text-5xl font-bold text-brand-accent">
-									1,200+
-								</p>
-								<p class="text-lg text-blue-200 mt-2">
-									Children Served
-								</p>
-							</div>
-							<div>
-								<p class="text-5xl font-bold text-brand-accent">
-									350+
-								</p>
-								<p class="text-lg text-blue-200 mt-2">
-									Dedicated Foster Families
-								</p>
-							</div>
-							<div>
-								<p class="text-5xl font-bold text-brand-accent">
-									15
-								</p>
-								<p class="text-lg text-blue-200 mt-2">
-									Years of Experience
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
+      <!-- About Us Page Content -->
+      <section id="page-about-us" class="page hidden py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h1 class="text-4xl font-bold text-brand-blue text-center mb-8">
+            About Us
+          </h1>
+          <div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-6">
+            <p>
+              Advantage Family Outreach & Foster Care is a private foster care
+              agency licensed through the Ohio Department of Youth Services. For
+              over 15 years, we have been dedicated to our mission of building
+              brighter futures for children by providing safe, stable, and
+              nurturing homes. We believe every child deserves the opportunity
+              to grow, heal, and thrive in an environment that empowers them to
+              reach their full potential.
+            </p>
+            <p>
+              Our organization was founded on the principle that fostering is
+              more than just a service—it's a community. We work tirelessly to
+              support our foster families with comprehensive training, ongoing
+              resources, and 24/7 access to our dedicated team. Our programs are
+              designed to meet a wide range of needs, from traditional foster
+              care to specialized therapeutic and sibling group placements.
+            </p>
+            <p>
+              At Advantage, we are committed to making a difference, one child
+              and one family at a time. We are proud of the strong relationships
+              we build and the positive impact we have on the lives of children
+              in our community. Join us in our journey to provide hope and a new
+              beginning for a child in need.
+            </p>
 
-				<div
-					id="contact-section"
-					class="py-20 bg-white">
-					<div class="container mx-auto px-6">
-						<div class="grid md:grid-cols-2 gap-12 items-center">
-							<div>
-								<h2 class="text-3xl font-bold text-brand-blue mb-4">
-									Ready to Make a Difference?
-								</h2>
-								<p class="text-gray-600 text-lg mb-6">
-									We'd love to hear from you. Whether you're
-									interested in becoming a foster parent,
-									volunteering, or just have a question, please
-									reach out. Our team is ready to help you start
-									your journey.
-								</p>
-								<div class="space-y-4 text-gray-700">
-									<!-- <p class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-brand-teal"></i> 123 Caring Lane, Hopeville, USA</p> -->
-									<p class="flex items-center">
-										<i
-											data-lucide="phone"
-											class="w-5 h-5 mr-3 text-brand-teal"></i>
-										(419) 526-KIDS or (419) 526-5437
-									</p>
-									<p class="flex items-center">
-										<i
-											data-lucide="mail"
-											class="w-5 h-5 mr-3 text-brand-teal"></i>
-										info@advantagefostercare.com
-									</p>
-								</div>
-							</div>
-							<div class="bg-brand-light p-8 rounded-lg shadow-lg">
-								<form>
-									<div class="mb-5">
-										<label
-											for="name"
-											class="block mb-2 text-sm font-medium text-gray-700"
-											>Full Name</label
-										>
-										<input
-											type="text"
-											id="name"
-											class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
-											placeholder="John Doe" />
-									</div>
-									<div class="mb-5">
-										<label
-											for="email"
-											class="block mb-2 text-sm font-medium text-gray-700"
-											>Email Address</label
-										>
-										<input
-											type="email"
-											id="email"
-											class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
-											placeholder="you@example.com" />
-									</div>
-									<div class="mb-5">
-										<label
-											for="message"
-											class="block mb-2 text-sm font-medium text-gray-700"
-											>Your Message</label
-										>
-										<textarea
-											id="message"
-											rows="4"
-											class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
-											placeholder="I'm interested in learning more about..."></textarea>
-									</div>
-									<button
-										type="submit"
-										class="w-full bg-brand-teal text-white font-bold py-3 px-4 rounded-lg hover:bg-teal-700 transition-colors shadow-md">
-										Send Message
-									</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+            <h2
+              class="text-3xl font-bold text-brand-blue text-center mb-6 pt-12">
+              Our Vision
+            </h2>
+            <p>
+              To create a world where every child experiences the love,
+              stability, and support of a permanent family, fostering their
+              growth into resilient, well-adjusted adults. We envision a
+              community where foster care is a celebrated pathway to healing and
+              belonging, and where families are equipped with everything they
+              need to make a profound difference.
+            </p>
 
-			<!-- About Us Page Content -->
-			<section
-				id="page-about-us"
-				class="page hidden py-20 bg-white">
-				<div class="container mx-auto px-6">
-					<h1 class="text-4xl font-bold text-brand-blue text-center mb-8">
-						About Us
-					</h1>
-					<div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-6">
-						<p>
-							Advantage Family Outreach & Foster Care is a private
-							foster care agency licensed through the Ohio Department
-							of Youth Services. For over 15 years, we have been
-							dedicated to our mission of building brighter futures for
-							children by providing safe, stable, and nurturing homes.
-							We believe every child deserves the opportunity to grow,
-							heal, and thrive in an environment that empowers them to
-							reach their full potential.
-						</p>
-						<p>
-							Our organization was founded on the principle that
-							fostering is more than just a service—it's a community.
-							We work tirelessly to support our foster families with
-							comprehensive training, ongoing resources, and 24/7
-							access to our dedicated team. Our programs are designed
-							to meet a wide range of needs, from traditional foster
-							care to specialized therapeutic and sibling group
-							placements.
-						</p>
-						<p>
-							At Advantage, we are committed to making a difference,
-							one child and one family at a time. We are proud of the
-							strong relationships we build and the positive impact we
-							have on the lives of children in our community. Join us
-							in our journey to provide hope and a new beginning for a
-							child in need.
-						</p>
-					</div>
-				</div>
-			</section>
+            <h2
+              class="text-3xl font-bold text-brand-blue text-center mb-6 pt-12">
+              Our Values
+            </h2>
+            <ul class="list-disc list-inside space-y-2">
+              <li>
+                <strong class="text-brand-teal">Compassion:</strong>
+                Approaching every child and family with empathy, understanding,
+                and a deep commitment to their well-being.
+              </li>
+              <li>
+                <strong class="text-brand-teal">Integrity:</strong>
+                Operating with transparency, honesty, and accountability in all
+                our actions and decisions.
+              </li>
+              <li>
+                <strong class="text-brand-teal">Empowerment:</strong>
+                Providing foster parents and children with the tools, training,
+                and support to overcome challenges and achieve their full
+                potential.
+              </li>
+              <li>
+                <strong class="text-brand-teal">Community:</strong>
+                Building strong, supportive networks among foster families,
+                staff, and partners to create a sense of belonging and shared
+                purpose.
+              </li>
+              <li>
+                <strong class="text-brand-teal">Advocacy:</strong>
+                Championing the rights and needs of children in foster care,
+                ensuring their voices are heard and their futures are protected.
+              </li>
+            </ul>
 
-			<!-- Contact Us Page Content -->
-			<section
-				id="page-contact-us"
-				class="page hidden py-20 bg-white">
-				<div class="container mx-auto px-6">
-					<h1 class="text-4xl font-bold text-brand-blue text-center mb-8">
-						Contact Us
-					</h1>
-					<div class="grid md:grid-cols-2 gap-12 items-center">
-						<div>
-							<p class="text-gray-600 text-lg mb-6">
-								We'd love to hear from you. Whether you're interested
-								in becoming a foster parent, volunteering, or just
-								have a question, please reach out. Our team is ready
-								to help you start your journey.
-							</p>
-							<div class="space-y-4 text-gray-700">
-								<!-- <p class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-brand-teal"></i> 123 Caring Lane, Hopeville, USA</p> -->
-								<p class="flex items-center">
-									<i
-										data-lucide="phone"
-										class="w-5 h-5 mr-3 text-brand-teal"></i>
-									(419) 526-KIDS or (419) 526-5437
-								</p>
-								<p class="flex items-center">
-									<i
-										data-lucide="mail"
-										class="w-5 h-5 mr-3 text-brand-teal"></i>
-									info@advantagefostercare.com
-								</p>
-							</div>
-						</div>
-						<div class="bg-brand-light p-8 rounded-lg shadow-lg">
-							<form>
-								<div class="mb-5">
-									<label
-										for="name"
-										class="block mb-2 text-sm font-medium text-gray-700"
-										>Full Name</label
-									>
-									<input
-										type="text"
-										id="name"
-										class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
-										placeholder="John Doe" />
-								</div>
-								<div class="mb-5">
-									<label
-										for="email"
-										class="block mb-2 text-sm font-medium text-gray-700"
-										>Email Address</label
-									>
-									<input
-										type="email"
-										id="email"
-										class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
-										placeholder="you@example.com" />
-								</div>
-								<div class="mb-5">
-									<label
-										for="message"
-										class="block mb-2 text-sm font-medium text-gray-700"
-										>Your Message</label
-									>
-									<textarea
-										id="message"
-										rows="4"
-										class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
-										placeholder="I'm interested in learning more about..."></textarea>
-								</div>
-								<button
-									type="submit"
-									class="w-full bg-brand-teal text-white font-bold py-3 px-4 rounded-lg hover:bg-teal-700 transition-colors shadow-md">
-									Send Message
-								</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+            <h2
+              class="text-3xl font-bold text-brand-blue text-center mb-6 pt-12">
+              Meet Our Team
+            </h2>
+            <p>
+              Our dedicated team is comprised of passionate professionals who
+              bring a wealth of experience and a deep commitment to foster care.
+              From our case managers and social workers to our administrative
+              staff and leadership, every member of Advantage Foster Care is
+              united by a common goal: to provide the best possible outcomes for
+              the children and families we serve. We are here to guide, support,
+              and celebrate with you every step of the way.
+            </p>
+          </div>
+        </div>
+      </section>
 
-		<!-- Footer - This is now a single, reusable component for the entire site -->
-		<footer class="bg-brand-blue text-blue-200">
-			<div class="container mx-auto px-6 py-10">
-				<div class="grid md:grid-cols-2 gap-8">
-					<div>
-						<h3 class="font-bold text-white text-lg mb-2">
-							Advantage Foster Care
-						</h3>
-						<p class="text-sm">
-							Building brighter futures for children, one family at a
-							time.
-						</p>
-					</div>
-					<div>
-						<h3 class="font-bold text-white text-lg mb-2">
-							Quick Links
-						</h3>
-						<ul class="space-y-1 text-sm grid grid-flow-col grid-rows-3">
-							<li>
-								<a
-									href="#home"
-									class="hover:text-white"
-									>Home</a
-								>
-							</li>
-							<li>
-								<a
-									href="#about-us"
-									class="hover:text-white"
-									>About Us</a
-								>
-							</li>
-							<li>
-								<a
-									href="#contact-us"
-									class="hover:text-white"
-									>Contact Us</a
-								>
-							</li>
-							<li>
-								<a
-									href="#grouphomes"
-									class="hover:text-white"
-									>Group Homes</a
-								>
-							</li>
-							<li>
-								<a
-									href="#fostering"
-									class="hover:text-white"
-									>Fostering</a
-								>
-							</li>
-							<li>
-								<a
-									href="#careers"
-									class="hover:text-white"
-									>Careers</a
-								>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="mt-8 border-t border-blue-800 pt-6 text-center text-sm">
-					<p>&copy; 2025 Advantage Foster Care. All Rights Reserved.</p>
-				</div>
-			</div>
-		</footer>
+      <!-- Contact Us Page Content -->
+      <section id="page-contact-us" class="page hidden py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h1 class="text-4xl font-bold text-brand-blue text-center mb-8">
+            Contact Us
+          </h1>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p class="text-gray-600 text-lg mb-6">
+                We'd love to hear from you. Whether you're interested in
+                becoming a foster parent, volunteering, or just have a question,
+                please reach out. Our team is ready to help you start your
+                journey.
+              </p>
+              <div class="space-y-4 text-gray-700">
+                <!-- <p class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-brand-teal"></i> 123 Caring Lane, Hopeville, USA</p> -->
+                <p class="flex items-center">
+                  <i
+                    data-lucide="phone"
+                    class="w-5 h-5 mr-3 text-brand-teal"></i>
+                  (419) 526-KIDS or (419) 526-5437
+                </p>
+                <p class="flex items-center">
+                  <i
+                    data-lucide="mail"
+                    class="w-5 h-5 mr-3 text-brand-teal"></i>
+                  info@advantagefostercare.com
+                </p>
+              </div>
+            </div>
+            <div class="bg-brand-light p-8 rounded-lg shadow-lg">
+              <form>
+                <div class="mb-5">
+                  <label
+                    for="name"
+                    class="block mb-2 text-sm font-medium text-gray-700"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+                    placeholder="John Doe" />
+                </div>
+                <div class="mb-5">
+                  <label
+                    for="email"
+                    class="block mb-2 text-sm font-medium text-gray-700"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity50"
+                    placeholder="you@example.com" />
+                </div>
+                <div class="mb-5">
+                  <label
+                    for="message"
+                    class="block mb-2 text-sm font-medium text-gray-700"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+                    placeholder="I'm interested in learning more about..."></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-brand-teal text-white font-bold py-3 px-4 rounded-lg hover:bg-teal-700 transition-colors shadow-md">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-		<script>
-			// Simple client-side router
-			const pages = {
-				home: document.getElementById("page-home"),
-				"about-us": document.getElementById("page-about-us"),
-				"contact-us": document.getElementById("page-contact-us"),
-			};
+    <!-- Footer - This is now a single, reusable component for the entire site -->
+    <footer class="bg-brand-blue text-blue-200">
+      <div class="container mx-auto px-6 py-10">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-bold text-white text-lg mb-2">
+              Advantage Foster Care
+            </h3>
+            <p class="text-sm">
+              Building brighter futures for children, one family at a time.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-lg mb-2">Quick Links</h3>
+            <ul class="space-y-1 text-sm grid grid-flow-col grid-rows-3">
+              <li>
+                <a href="#home" class="hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#about-us" class="hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#contact-us" class="hover:text-white">Contact Us</a>
+              </li>
+              <li>
+                <a href="portal.html?type=employee" class="hover:text-white"
+                  >Employee Portal</a
+                >
+              </li>
+              <li><a
+                href="portal.html?type=foster-parent"
+                class="hover:text-white"
+                >Foster Parent Portal</a
+              ></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-blue-800 pt-6 text-center text-sm">
+          <p>&copy; 2025 Advantage Foster Care. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
 
-			const showPage = (pageName) => {
-				for (const page in pages) {
-					pages[page].classList.add("hidden");
-				}
-				if (pages[pageName]) {
-					pages[pageName].classList.remove("hidden");
-				} else {
-					pages["home"].classList.remove("hidden");
-				}
-				window.scrollTo({ top: 0, behavior: "smooth" });
-			};
+    <script>
+      // Simple client-side router
+      const pages = {
+        home: document.getElementById("page-home"),
+        "about-us": document.getElementById("page-about-us"),
+        "contact-us": document.getElementById("page-contact-us"),
+      };
 
-			const handleRouting = () => {
-				const hash = window.location.hash.slice(1);
-				showPage(hash || "home");
-			};
+      const showPage = (pageName) => {
+        for (const page in pages) {
+          pages[page].classList.add("hidden");
+        }
+        if (pages[pageName]) {
+          pages[pageName].classList.remove("hidden");
+        } else {
+          pages["home"].classList.remove("hidden");
+        }
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
 
+      const handleRouting = () => {
+        const hash = window.location.hash.slice(1);
+        showPage(hash || "home");
+      };
 
-			window.addEventListener("hashchange", handleRouting);
-			window.addEventListener("DOMContentLoaded", handleRouting);
+      window.addEventListener("hashchange", handleRouting);
+      window.addEventListener("DOMContentLoaded", handleRouting);
 
-			// Simple mobile menu toggle
-			const mobileMenuButton = document.getElementById("mobile-menu-button");
-			const mobileMenu = document.getElementById("mobile-menu");
+      // Simple mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-			mobileMenuButton.addEventListener("click", () => {
-				mobileMenu.classList.toggle("hidden");
-			});
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-			// Initialize Lucide icons
-			lucide.createIcons();
-		</script>
-	</body>
+      // Initialize Lucide icons
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
-
