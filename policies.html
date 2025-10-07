@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies & Procedures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="flex h-screen">
+        <aside class="w-64 bg-gray-800 text-white p-6">
+            <h1 class="text-2xl font-bold mb-8">Pixel Dynasty Dev</h1>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="employee-dashboard.html" class="block p-2 rounded bg-gray-700">Dashboard</a></li>
+                    <li class="mb-4"><a href="./policies.html" class="block p-2 rounded hover:bg-gray-700">Policies</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 rounded hover:bg-gray-700">Relias</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 rounded hover:bg-gray-700">Incident Reporting</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 rounded hover:bg-gray-700">CareLogic</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 rounded hover:bg-gray-700">CareLogic [Training]</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="flex-1 p-8 overflow-y-auto">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Policies & Procedures</h2>
+            <div id="policies-container" class="space-y-4">
+                <p class="text-gray-500">Loading policies...</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const sheetSources = [
+                { category: 'OFOFC', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQhMrE4B_PjxoesN7E0_yo5yoD4pKMq7VJWLsOjm9S43UpVbk1MPFMGryYjurDA8TkwRSC9pnnCV0W-/pub?gid=1635401576&single=true&output=csv' },
+                { category: 'Group Homes', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQhMrE4B_PjxoesN7E0_yo5yoD4pKMq7VJWLsOjm9S43UpVbk1MPFMGryYjurDA8TkwRSC9pnnCV0W-/pub?gid=558865368&single=true&output=csv' },
+                { category: 'Behavioral Health', url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQhMrE4B_PjxoesN7E0_yo5yoD4pKMq7VJWLsOjm9S43UpVbk1MPFMGryYjurDA8TkwRSC9pnnCV0W-/pub?gid=1506264972&single=true&output=csv' },
+            ];
+
+            const policiesContainer = document.getElementById('policies-container');
+
+            const parseCSVWithSubsections = (text) => {
+                const sections = {};
+                let currentSection = 'Uncategorized';
+                const lines = text.trim().split(/\r\n|\n/);
+
+                for (const line of lines) {
+                    if (line.match(/^[A-Z]\.\s/)) {
+                        currentSection = line.split(',')[0].trim();
+                        if (!sections[currentSection]) sections[currentSection] = [];
+                        continue;
+                    }
+
+                    const lastComma = line.lastIndexOf(',');
+                    const secondLastComma = line.lastIndexOf(',', lastComma - 1);
+                    if (lastComma === -1 || secondLastComma === -1) continue;
+
+                    const link = line.substring(lastComma + 1).trim();
+                    const revisionDate = line.substring(secondLastComma + 1, lastComma).trim();
+                    let policyName = line.substring(0, secondLastComma).trim();
+
+                    if (link.startsWith('http') && revisionDate) {
+                        if (policyName.startsWith('"')) policyName = policyName.substring(1);
+                        if (policyName.endsWith('"')) policyName = policyName.slice(0, -1);
+                        policyName = policyName.replace(/^[0-9]+\.\s*/, '').trim();
+                        if (!sections[currentSection]) sections[currentSection] = [];
+                        sections[currentSection].push({ PolicyName: policyName, RevisionDate: revisionDate, Link: link });
+                    }
+                }
+                return sections;
+            };
+
+            try {
+                const responses = await Promise.all(sheetSources.map(source => fetch(source.url)));
+                policiesContainer.innerHTML = '';
+
+                for (let i = 0; i < responses.length; i++) {
+                    const response = responses[i];
+                    const source = sheetSources[i];
+                    if (!response.ok) continue;
+
+                    const csvText = await response.text();
+                    const subsections = parseCSVWithSubsections(csvText);
+
+                    const mainDetails = document.createElement('details');
+                    mainDetails.className = 'bg-white shadow rounded-lg';
+                    const mainSummary = document.createElement('summary');
+                    mainSummary.className = 'p-4 font-bold text-lg cursor-pointer hover:bg-gray-50';
+                    mainSummary.textContent = source.category;
+                    mainDetails.appendChild(mainSummary);
+                    const subsectionContainer = document.createElement('div');
+                    subsectionContainer.className = 'p-4 space-y-3';
+                    mainDetails.appendChild(subsectionContainer);
+
+                    for (const sectionTitle in subsections) {
+                        const policies = subsections[sectionTitle];
+                        if (policies.length === 0) continue;
+
+                        const subDetails = document.createElement('details');
+                        subDetails.className = 'bg-gray-50 rounded';
+                        const subSummary = document.createElement('summary');
+                        subSummary.className = 'p-3 font-semibold text-md cursor-pointer hover:bg-gray-200';
+                        subSummary.textContent = sectionTitle;
+                        const ul = document.createElement('ul');
+                        ul.className = 'p-3 pt-0 divide-y';
+
+                        policies.forEach(policy => {
+                            const li = document.createElement('li');
+                            li.className = 'py-2 flex justify-between items-center';
+                            li.innerHTML = `
+                                <a href="${policy.Link}" target="_blank" class="text-blue-600 hover:underline text-sm">${policy.PolicyName}</a>
+                                <em class="text-xs text-gray-500 whitespace-nowrap pl-4">Updated: ${policy.RevisionDate}</em>
+                            `;
+                            ul.appendChild(li);
+                        });
+                        subDetails.appendChild(subSummary);
+                        subDetails.appendChild(ul);
+                        subsectionContainer.appendChild(subDetails);
+                    }
+                    policiesContainer.appendChild(mainDetails);
+                }
+            } catch (error) {
+                policiesContainer.innerHTML = `<p class="text-red-500">Error loading policies.</p>`;
+                console.error('Error fetching sheets:', error);
+            }
+        });
+    </script>
+</body>
+</html>
