@@ -1,28 +1,28 @@
 /* Employee dashboard specific styles */
 /* Mobile responsiveness for the sidebar */
 @media (max-width: 768px) {
-    aside {
-        width: 100%;
-        height: auto;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
-        padding: 1rem;
-    }
-    aside nav ul {
-        display: flex;
-        justify-content: space-around;
-    }
-    aside nav li {
-        margin-bottom: 0;
-    }
-    aside nav a {
-        text-align: center;
-        padding: 0.5rem;
-    }
-    main {
-        margin-bottom: 80px; /* Adjust based on footer height */
-    }
+	aside {
+		width: 100%;
+		height: auto;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		padding: 1rem;
+	}
+	aside nav ul {
+		display: flex;
+		justify-content: space-around;
+	}
+	aside nav li {
+		margin-bottom: 0;
+	}
+	aside nav a {
+		text-align: center;
+		padding: 0.5rem;
+	}
+	main {
+		margin-bottom: 80px; /* Adjust based on footer height */
+	}
 }
