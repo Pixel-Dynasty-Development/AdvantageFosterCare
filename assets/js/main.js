@@ -160,8 +160,8 @@ function handleLoginSubmit(event, userType) {
 	const password = document.getElementById("password").value;
 	let isAuthenticated = false;
 
-	const employeeCreds = { user: "admin_user", pass: "admin" };
-	const fosterCreds = { user: "foster_parent", pass: "parent" };
+	const employeeCreds = { user: "Admin", pass: "admin" };
+	const fosterCreds = { user: "Admin", pass: "admin" };
 
 	if (
 		userType === "employee" &&
@@ -310,7 +310,6 @@ async function fetchAndRenderPolicies() {
 					li.className = "py-2 flex justify-between items-center";
 					li.innerHTML = `
 						<a href="${policy.Link}" target="_blank" class="text-blue-600 hover:underline text-sm">${policy.PolicyName}</a>
-						
 					`;
 					ul.appendChild(li);
 				});
