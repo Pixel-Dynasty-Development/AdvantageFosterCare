@@ -1,52 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 font-sans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Employee Dashboard</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			/* Mobile responsiveness for the sidebar */
+			@media (max-width: 768px) {
+				aside {
+					width: 100%;
+					height: auto;
+					position: fixed;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					z-index: 10;
+					padding: 1rem;
+				}
+				aside nav ul {
+					display: flex;
+					justify-content: space-around;
+				}
+				aside nav li {
+					margin-bottom: 0;
+				}
+				aside nav a {
+					text-align: center;
+					padding: 0.5rem;
+				}
+				main {
+					margin-bottom: 80px; /* Adjust based on footer height */
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-100 font-sans">
+		<div
+			class="flex h-screen"
+			id="employee-dashboard-container">
+			<!-- Employee Navigation -->
+			<div id="employeenav-placeholder"></div>
 
-    <div class="flex h-screen">
-        <aside class="w-64 bg-gray-800 text-white p-6">
-            <h1 class="text-2xl font-bold mb-8">Pixel Dynasty Dev</h1>
-            <nav>
-                <ul>
-                    <li class="mb-4"><a href="employee-dashboard.html" class="block p-2 rounded bg-gray-700">Dashboard</a></li>
-                    <li class="mb-4"><a href="./policies.html" class="block p-2 rounded hover:bg-gray-700">Policies</a></li>
-                    <li class="mb-4"><a href="#" class="block p-2 rounded hover:bg-gray-700">Relias</a></li>
-                    <li class="mb-4"><a href="#" class="block p-2 rounded hover:bg-gray-700">Incident Reporting</a></li>
-                    <li class="mb-4"><a href="#" class="block p-2 rounded hover:bg-gray-700">CareLogic</a></li>
-                    <li class="mb-4"><a href="#" class="block p-2 rounded hover:bg-gray-700">CareLogic [Training]</a></li>
-                </ul>
-            </nav>
-        </aside>
+			<!-- Main content area -->
+			<div
+				id="employee-page-content"
+				class="flex-1 p-8 overflow-y-auto">
+				<!-- Content will be loaded here -->
+			</div>
+		</div>
 
-        <main class="flex-1 p-8 overflow-y-auto">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Dashboard</h2>
-            
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-xl font-bold">Welcome!</h3>
-                <p class="mt-2 text-gray-600">This is your main dashboard. You can find important company announcements and quick links here.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h4 class="font-bold text-gray-700">Quick Link 1</h4>
-                    <p class="text-sm text-gray-600 mt-1">Description for a useful link.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h4 class="font-bold text-gray-700">Quick Link 2</h4>
-                    <p class="text-sm text-gray-600 mt-1">Description for another useful link.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h4 class="font-bold text-gray-700">Company News</h4>
-                    <p class="text-sm text-gray-600 mt-1">Latest announcements.</p>
-                </div>
-            </div>
-        </main>
-    </div>
+		<script>
+			// Basic Authentication
+			const isAuthenticated = localStorage.getItem("authenticated");
+			if (!isAuthenticated) {
+				const password = prompt(
+					"Please enter the password to access the Employee Dashboard:"
+				);
+				if (password === "admin") {
+					// Replace with a more secure method in production
+					localStorage.setItem("authenticated", "true");
+				} else {
+					alert(
+						"Incorrect password. You will be redirected to the home page."
+					);
+					window.location.href = "index.html";
+				}
+			}
 
-</body>
+			// Load components
+			fetch("components/employeenav.html")
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById("employeenav-placeholder").innerHTML =
+						data;
+				});
+
+			// Function to load employee pages
+			const loadEmployeePage = (page) => {
+				fetch(`pages/${page}`)
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById("employee-page-content").innerHTML =
+							data;
+					})
+					.catch((error) => {
+						console.error("Error loading employee page:", error);
+						document.getElementById("employee-page-content").innerHTML =
+							'<p class="text-red-500">Error loading page.</p>';
+					});
+			};
+
+			// Load the default employee dashboard home page on initial load
+			document.addEventListener("DOMContentLoaded", () => {
+				loadEmployeePage("employee-dashboard-home.html");
+			});
+		</script>
+	</body>
 </html>
