@@ -1,0 +1,126 @@
+<header
+	id="header"
+	class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+	<div class="container mx-auto px-6 py-4">
+		<div class="flex items-center justify-between">
+			<a href="/">
+				<img
+					src="assets/images/Logo.jpg"
+					alt="logo"
+					height="40"
+					width="185" />
+			</a>
+			<nav class="hidden lg:flex items-center space-x-8">
+				<a
+					href="/home"
+					class="text-text-primary hover:text-brand-blue transition-colors font-medium"
+					>Home</a
+				>
+				<a
+					href="/about-us"
+					class="text-text-primary hover:text-brand-blue transition-colors font-medium"
+					>About Us</a
+				>
+				<a
+					href="/contact-us"
+					class="text-text-primary hover:text-brand-blue transition-colors font-medium"
+					>Contact</a
+				>
+
+				<div class="relative group">
+					<button
+						class="flex items-center text-text-primary hover:text-brand-blue transition-colors font-medium focus:outline-none">
+						Resources
+						<svg
+							class="w-4 h-4 ml-1 transform transition-transform group-hover:rotate-180"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M19 9l-7 7-7-7"></path>
+						</svg>
+					</button>
+					<div
+						class="absolute hidden group-hover:block z-25 bg-white shadow-lg rounded-md mt-1.5 w-40 left-0 orgin-top-left transition-all duration-500">
+						<a
+							href="/resources.html#for-parents"
+							class="block px-4 py-2 text-gray-400 hover:bg-gray-100 opacity-50 cursor-not-allowed pointer-events-none"
+							>For Parents</a
+						>
+						<a
+							href="/resources.html#group-homes"
+							class="block px-4 py-2 text-gray-400 hover:bg-gray-100 opacity-50 cursor-not-allowed pointer-events-none"
+							>Group Homes</a
+						>
+						<a
+							href="/resources.html#careers"
+							class="block px-4 py-2 text-gray-400 hover:bg-gray-100 opacity-50 cursor-not-allowed pointer-events-none"
+							>Careers</a
+						>
+					</div>
+				</div>
+			</nav>
+			<div class="flex items-center space-x-4">
+				<a
+					href="/contact-us"
+					class="hidden lg:inline-block bg-brand-accent hover:opacity-90 text-white font-semibold px-5 py-2 rounded-lg transition-all shadow-md"
+					>Get Involved</a
+				>
+				<button
+					id="mobile-menu-button"
+					class="lg:hidden text-brand-dark-blue">
+					<svg
+						class="w-6 h-6"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div
+		id="mobile-menu"
+		class="hidden lg:hidden px-6 pb-4">
+		<a
+			href="/home"
+			class="block py-2 text-text-primary hover:text-brand-blue"
+			>Home</a
+		>
+		<a
+			href="/about-us"
+			class="block py-2 text-text-primary hover:text-brand-blue"
+			>About Us</a
+		>
+		<a
+			href="/services"
+			class="block py-2 text-text-primary hover:text-brand-blue"
+			>Our Services</a
+		>
+		<a
+			href="/contact-us"
+			class="block py-2 text-text-primary hover:text-brand-blue"
+			>Contact</a
+		>
+		<a
+			href="/employee-login"
+			class="block py-2 text-text-primary hover:text-brand-blue"
+			>Employee Portal</a
+		>
+		<a
+			href="/contact-us"
+			class="block mt-2 w-full text-center bg-brand-accent hover:opacity-90 text-white font-semibold px-5 py-2 rounded-lg transition-all shadow-md"
+			>Get Involved</a
+		>
+	</div>
+</header>

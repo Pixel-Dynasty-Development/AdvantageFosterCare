@@ -1,0 +1,50 @@
+<div class="min-h-screen flex items-center justify-center bg-brand-light">
+	<div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+		<h2 class="text-2xl font-bold text-foster-primary mb-6 text-center">
+			Foster Parent Portal
+		</h2>
+		<form id="foster-login-form">
+			<div class="mb-5">
+				<label
+					for="username"
+					class="block mb-2 text-sm font-medium text-text-primary"
+					>Username</label
+				>
+				<input
+					type="text"
+					id="username"
+					class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-foster-secondary focus:ring focus:ring-foster-secondary focus:ring-opacity-50"
+					required />
+			</div>
+			<div class="mb-5">
+				<label
+					for="password"
+					class="block mb-2 text-sm font-medium text-text-primary"
+					>Password</label
+				>
+				<input
+					type="password"
+					id="password"
+					class="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-foster-secondary focus:ring focus:ring-foster-secondary focus:ring-opacity-50"
+					required />
+			</div>
+			<button
+				type="submit"
+				class="w-full bg-foster-primary hover:bg-foster-secondary text-white font-bold py-3 px-4 rounded-lg transition-colors">
+				Login
+			</button>
+		</form>
+		<p
+			id="login-error"
+			class="text-red-500 text-center mt-4 hidden">
+			Invalid credentials.
+		</p>
+		<div class="text-center mt-6">
+			<a
+				href="/home"
+				class="text-sm text-brand-blue hover:underline"
+				>← Back to Main Site</a
+			>
+		</div>
+	</div>
+</div>
