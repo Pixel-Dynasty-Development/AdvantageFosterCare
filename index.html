@@ -11,95 +11,47 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
-			type="module"></script>
-		<script>
-			tailwind.config = {
-				theme: {
-					extend: {
-						fontFamily: {
-							sans: ["Inter", "sans-serif"],
+		<link
+			rel="stylesheet"
+			href="assets/css/style.css" />
+			<script>
+				tailwind.config = {
+						theme: {
+								extend: {
+										fontFamily: {
+												sans: ["Inter", "sans-serif"],
+										},
+										colors: {
+												// --- Base Palette ---
+												"brand-blue": "#5496dc",
+												"brand-dark-blue": "#2c5282",
+												"brand-light": "#f0f9ff",
+												"brand-accent": "#e5b839", // New Gold Accent Color
+												"text-primary": "#2d3748",
+												"text-secondary": "#718096",
+		
+												// --- Employee Portal Palette ---
+												"employee-primary": "#4a5568",
+												"employee-secondary": "#718096",
+		
+												// --- Foster Parent Portal Palette ---
+												"foster-primary": "#2c7a7b",
+												"foster-secondary": "#4fd1c5",
+										},
+								},
 						},
-						colors: {
-							"brand-blue": "#1E3A8A",
-							"brand-teal": "#0D9488",
-							"brand-light": "#F0F9FF",
-							"brand-accent": "#F59E0B",
-						},
-					},
-				},
-			};
+				};
 		</script>
-		<style>
-			body {
-				scroll-behavior: smooth;
-			}
-		</style>
 	</head>
 
 	<body class="bg-brand-light font-sans antialiased">
-		<!-- Header Navigation -->
 		<div id="nav-placeholder"></div>
 
 		<main id="page-content">
-			<!-- Page content will be loaded here -->
-		</main>
+			</main>
 
-		<!-- Footer -->
 		<div id="footer-placeholder"></div>
 
-		<script>
-			// Load components
-			fetch("components/nav.html")
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById("nav-placeholder").innerHTML = data;
-					lucide.createIcons(); // Initialize Lucide icons after loading nav
-					// Mobile menu toggle
-					const mobileMenuButton =
-						document.getElementById("mobile-menu-button");
-					const mobileMenu = document.getElementById("mobile-menu");
-
-					mobileMenuButton.addEventListener("click", () => {
-						mobileMenu.classList.toggle("hidden");
-					});
-				});
-
-			fetch("components/footer.html")
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById("footer-placeholder").innerHTML = data;
-				});
-
-			// Function to load pages dynamically
-			const loadPage = (page) => {
-				fetch(`pages/${page}`)
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById("page-content").innerHTML = data;
-						lucide.createIcons(); // Initialize Lucide icons after loading page content
-						window.scrollTo({ top: 0, behavior: "smooth" });
-					})
-					.catch((error) => {
-						console.error("Error loading page:", error);
-						document.getElementById("page-content").innerHTML =
-							'<p class="text-red-500">Error loading page.</p>';
-					});
-			};
-
-			// Handle initial page load and hash changes
-			const handleRouting = () => {
-				const hash = window.location.hash.slice(1);
-				if (hash) {
-					loadPage(`${hash}.html`);
-				} else {
-					loadPage("home.html"); // Default to home page
-				}
-			};
-
-			window.addEventListener("hashchange", handleRouting);
-			window.addEventListener("DOMContentLoaded", handleRouting);
-		</script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>

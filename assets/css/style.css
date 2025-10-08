@@ -1,0 +1,37 @@
+/* Add these styles to the end of your file */
+
+/* --- Collapsible Sidebar Styles --- */
+
+/* Styles for the sidebar container */
+#sidenav-placeholder {
+	transition: transform 0.3s ease-in-out;
+}
+
+/* On mobile (default), the sidebar is a fixed panel that slides in */
+@media (max-width: 767px) {
+	#sidenav-placeholder {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		z-index: 20;
+	}
+
+	/* State for when the sidebar is hidden off-screen */
+	.sidebar-closed {
+		transform: translateX(-100%);
+	}
+
+	/* State for when the sidebar is visible on-screen */
+	.sidebar-open {
+		transform: translateX(0);
+	}
+}
+
+/* On desktop, the sidebar is always visible and part of the layout */
+@media (min-width: 768px) {
+	#sidenav-placeholder {
+		position: relative;
+		transform: translateX(0);
+	}
+}
