@@ -227,6 +227,10 @@ async function fetchAndRenderPolicies() {
 			category: "Behavioral Health",
 			url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhMrE4B_PjxoesN7E0_yo5yoD4pKMq7VJWLsOjm9S43UpVbk1MPFMGryYjurDA8TkwRSC9pnnCV0W-/pub?gid=1506264972&single=true&output=csv",
 		},
+		{
+			category: "Foster Care",
+			url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhMrE4B_PjxoesN7E0_yo5yoD4pKMq7VJWLsOjm9S43UpVbk1MPFMGryYjurDA8TkwRSC9pnnCV0W-/pub?gid=774533600&single=true&output=csv",
+		},
 	];
 
 	const policiesContainer = document.getElementById("policies-container");
@@ -306,7 +310,7 @@ async function fetchAndRenderPolicies() {
 					li.className = "py-2 flex justify-between items-center";
 					li.innerHTML = `
 						<a href="${policy.Link}" target="_blank" class="text-blue-600 hover:underline text-sm">${policy.PolicyName}</a>
-						<em class="text-xs text-gray-500 whitespace-nowrap pl-4">Updated: ${policy.RevisionDate}</em>
+						
 					`;
 					ul.appendChild(li);
 				});
