@@ -27,7 +27,7 @@ function router() {
 	const path = window.location.pathname;
 	let route = path === "/" ? "home" : path.slice(1);
 
-	const publicPages = ["home", "about-us", "contact-us"];
+	const publicPages = ["home", "about", "contact"];
 	const employeePages = [
 		"employee-dashboard",
 		"policies",
@@ -135,11 +135,11 @@ async function renderDashboard(userType, page) {
 		pageContent.innerHTML = `
             <div id="sidenav-placeholder" class="sidebar-closed">${navHtml}</div>
             <main id="dashboard-content" class="flex-1 p-8 overflow-y-auto"></main>
-			<button id="menu-toggle" class="md:hidden fixed top-4 left-4 bg-gray-800 text-white p-2 rounded-md z-30">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-				</svg>
-			</button>
+      <button id="menu-toggle" class="md:hidden fixed top-4 left-4 bg-gray-800 text-white p-2 rounded-md z-30">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
         `;
 
 		document
@@ -309,8 +309,8 @@ async function fetchAndRenderPolicies() {
 					const li = document.createElement("li");
 					li.className = "py-2 flex justify-between items-center";
 					li.innerHTML = `
-						<a href="${policy.Link}" target="_blank" class="text-blue-600 hover:underline text-sm">${policy.PolicyName}</a>
-					`;
+                <a href="${policy.Link}" target="_blank" class="text-blue-600 hover:underline text-sm">${policy.PolicyName}</a>
+              `;
 					ul.appendChild(li);
 				});
 				subDetails.appendChild(subSummary);
