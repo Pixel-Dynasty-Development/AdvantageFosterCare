@@ -1,4 +1,6 @@
-/* Add these styles to the end of your file */
+body {
+	overflow-y: auto !important;
+}
 
 /* --- Collapsible Sidebar Styles --- */
 
